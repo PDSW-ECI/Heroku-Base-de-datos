@@ -42,13 +42,21 @@
 	![](img/HerokuCreateApp8B.png)
 
 7.	Se encontrara la siguiente informacion:
-
+	```
 	Host: Server donde esta alojada la base de datos
+	```
+	```
 	DataBase: Nombre de la base de datos 
+	```
+	```
 	User: Usuario que se usara para entrar en la base de datos
+	```
+	```
 	Port: Puerto por default 
+	```
+	```
 	Password: contraseña del usuario para entrar en la base de datos
-	
+	```
 	![](img/HerokuCreateApp9.png)
 
 
@@ -61,9 +69,9 @@
 	![](img/SQuirreLinstaller2.png)
 	
 	(3)Una vez descargado el instalador dirijase a la ruta donde se encuentra el archivo, abra la consola y proceda a instalar el           programa con el siguiente comando:
-	
+	```
 	java -jar squirrel-sql-<version>-install.jar
-	
+	```
 	(4)En caso de que el instalador genere errores por que no tiene permisos de escritura en la ruta por default,seleccione otra 		tipo "Documentos"
 	
 	![](img/SQuirreLinstaller3.png)
@@ -146,3 +154,5 @@
 	
 	![](img/SQuirreLinstaller13.png)
 	![](img/SQuirreLinstaller14.png)
+9.	Configuracion del contenedor liviano
+	(1)En el contenedor liviano ajuste 
