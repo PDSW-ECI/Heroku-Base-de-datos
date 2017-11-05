@@ -63,6 +63,7 @@
 8.	Conectándose a la base de datos
 	
 	(1)Para conectarse a la base de datos es preferible utilizar un cliente,en este caso usaremos el cliente SQuirreL.
+	
 	(2)Diríjase a la pagina oficial de SQuirreL [http://www.squirrelsql.org/](http://www.squirrelsql.org/) y descargue el instalador
 	
 	![](img/SQuirreLinstaller1.png)
