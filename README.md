@@ -104,30 +104,38 @@
 	
 	(14)Ahora dirijase a la pestaña Alias y agrege uno nuevo y llene los campos acorde a lo siguiente:
 	
+	```
 	Name: Nombre de la conexion "puede ser cualquiera"
-	
+	```
+	```
 	Driver: Seleccione el driver a usar en este caso "PostgreSQL"
-	
+	```
+	```
 	URL: La URL de la base de datos, para esto usaremos los datos del paso 7:
-	
+	```
+	```
 	jdbc:postgresql://[Host del paso 7]:[Puerto del paso 7]/[Base de datos del paso 7]
-		
+	```
+	```
 	Su URL debe quedar como el siguiente ejemplo: 
-		
+	```
+	```
 	jdbc:postgresql://ec2-50-19-110-195.compute-1.amazonaws.com:5432/d6gl59md04gnl0
-		
+	```	
 	Debido a que la version gratuita de heroku no tiene configurado las credenciales SSL,es necesario informarle al SQuirreL 		(si no hacemos esto generara error al intentar conectarnos),para esto agregamos la siguente informacion a la URL:
-		
+	```	
 	?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
-		
+	```	
 	Por lo que la URL en definitiva quedaria de la siguiente manera:
-		
+	```	
 	jdbc:postgresql://ec2-50-19-110-195.compute-1.amazonaws.com:5432/d6gl59md04gnl0?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
-		
+	```
+	```
 	User: user del paso 7
-	
+	```
+	```
 	Password: contraseña del paso 7
-	
+	```
 	![](img/SQuirreLinstaller11.png)
 	
 	(15)Una vez configurado presione el boton "Test",si fue correcta la conexion proceda a darle "ok",si no revise los parametros 		nuevamente.
