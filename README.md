@@ -60,43 +60,81 @@
 	![](img/SQuirreLinstaller1.png)
 	![](img/SQuirreLinstaller2.png)
 	
-	(3)Una vez descargado el instalador dirijase a la ruta donde se encuentra el archivo y abra la consola y proceda a instalar el archivo con el siguiente comando:
+	(3)Una vez descargado el instalador dirijase a la ruta donde se encuentra el archivo, abra la consola y proceda a instalar el           programa con el siguiente comando:
+	
 	java -jar squirrel-sql-<version>-install.jar
-	(4)En caso de que el instalador genere errores por que no tiene permisos de escritura en la ruta por default,seleccione otra tipo "Documentos"
+	
+	(4)En caso de que el instalador genere errores por que no tiene permisos de escritura en la ruta por default,seleccione otra 		tipo "Documentos"
+	
 	![](img/SQuirreLinstaller3.png)
+	
 	(5)Seleccione instalar todos los plugins
+	
 	![](img/SQuirreLinstaller4.png)
+	
 	(6)Seleccione crear un acceso directo a escritorio
+	
 	![](img/SQuirreLinstaller5.png)
-	(7)Una vez instalado se procedera a descargar el ultimo plugin de Postgres,para esto dirijase al siguiente link y descargue la version acorde a su version de java.
+	
+	(7)Una vez instalado se procedera a descargar el ultimo plugin de Postgres,para esto dirijase al siguiente link y descargue la 		version acorde a su version de java.
+	
 	[https://jdbc.postgresql.org/download.html](https://jdbc.postgresql.org/download.html)
+	
 	(8)Una vez descargado el plugin copielo y peguelo en la carpeta "plugins"  donde se instalo SQuirreL
+	
 	![](img/SQuirreLinstaller6.png)
+	
 	(9)Proceda a ejecutar el programa y dirijase a la pestaña "Drivers" y localize el driver "Postgres"
+	
 	![](img/SQuirreLinstaller7.png)
+	
 	(10)Dele click derecho y luego seleccione la opcion de "modificar"
+	
 	![](img/SQuirreLinstaller8.png)
+	
 	(11)Se abrira un recuadro con la configuracion del plugin,deje la casilla Class Name como se observa en la siguiente imagen.
+	
 	![](img/SQuirreLinstaller9.png)
-	(12)Ahora en la pestaña "Extra Class Path" agregue el plugin de Postgres anteriormente descargado y en la casilla Class Name dejela como muestra la imagen
+	
+	(12)Ahora en la pestaña "Extra Class Path" agregue el plugin de Postgres anteriormente descargado y en la casilla Class Name 		dejela como muestra la imagen.
+	
 	![](img/SQuirreLinstaller10.png)
+	
 	(13)Guarde la configuracion y podra observar que el driver Postgres ya sale con un "chulito" de color azul.
+	
 	(14)Ahora dirijase a la pestaña Alias y agrege uno nuevo y llene los campos acorde a lo siguiente:
+	
 	Name: Nombre de la conexion "puede ser cualquiera"
+	
 	Driver: Seleccione el driver a usar en este caso "PostgreSQL"
+	
 	URL: La URL de la base de datos, para esto usaremos los datos del paso 7:
-		jdbc:postgresql://[Host del paso 7]:[Puerto del paso 7]/[Base de datos del paso 7]
-		Su URL debe quedar como el siguiente ejemplo: 
-		jdbc:postgresql://ec2-50-19-110-195.compute-1.amazonaws.com:5432/d6gl59md04gnl0
-		Debido a que la version gratuita de heroku no tiene configurado las credenciales SSL,es necesario informarle al SQuirreL (si no hacemos esto generara error al intentar conectarnos),para esto agregamos la siguente informacion a la URL:
-		?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
-		Por lo que la URL en definitiva quedaria de la siguiente manera:
-		jdbc:postgresql://ec2-50-19-110-195.compute-1.amazonaws.com:5432/d6gl59md04gnl0?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+	
+	jdbc:postgresql://[Host del paso 7]:[Puerto del paso 7]/[Base de datos del paso 7]
+		
+	Su URL debe quedar como el siguiente ejemplo: 
+		
+	jdbc:postgresql://ec2-50-19-110-195.compute-1.amazonaws.com:5432/d6gl59md04gnl0
+		
+	Debido a que la version gratuita de heroku no tiene configurado las credenciales SSL,es necesario informarle al SQuirreL 		(si no hacemos esto generara error al intentar conectarnos),para esto agregamos la siguente informacion a la URL:
+		
+	?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+		
+	Por lo que la URL en definitiva quedaria de la siguiente manera:
+		
+	jdbc:postgresql://ec2-50-19-110-195.compute-1.amazonaws.com:5432/d6gl59md04gnl0?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+		
 	User: user del paso 7
+	
 	Password: contraseña del paso 7
+	
 	![](img/SQuirreLinstaller11.png)
-	(15)Una vez configurado presione el boton "Test",si fue correcta la conexion proceda a darle "ok",si no revise los parametros nuevamente.
+	
+	(15)Una vez configurado presione el boton "Test",si fue correcta la conexion proceda a darle "ok",si no revise los parametros 		nuevamente.
+	
 	![](img/SQuirreLinstaller12.png)
+	
 	(16)Parece arriba del alias anteriormente creado y dele doble click para conectarse a la base de datos.
+	
 	![](img/SQuirreLinstaller13.png)
 	![](img/SQuirreLinstaller14.png)
