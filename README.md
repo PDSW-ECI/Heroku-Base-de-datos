@@ -1,4 +1,4 @@
-## Configuracion Base de datos en Heroku
+## Configuración Base de datos en Heroku
 
 
 
