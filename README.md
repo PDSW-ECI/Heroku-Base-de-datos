@@ -174,53 +174,14 @@
 	(2) En el contenedor liviano ajuste el "JdbcHelper" para que use Postgres.
 	
 	![](img/Contenedor1.png)
-	
-	(3) Ajuste los archivos de configuración de la aplicacion (applicationconfig-h2.properties y applicationconfig.properties)
-	
-	Para cada archivo agregue o reemplace la correspondiente configuración
-	
-	applicationconfig-h2.properties
-	```
-	dao=mybatis
-	
-	
-	url=jdbc:h2:file:./target/db/testdb;MODE=PostgreSQL
-	
-	driver=org.postgresql.Driver
-	
-	driver.encoding=UTF8
-	
-	user=anonymous
-	
-	pwd=""
-	
-	
-	config=mybatis-config-h2.xml
-	```
-	
-	applicationconfig.properties
-	```
-	dao=mybatis
+		
 
-	url=[URL definitiva del punto 8, cambiando '&' por '&amp;']
 	
-	driver=org.postgresql.Driver
+	(3) Ajuste de los archivos de configuración de mybayis(mybatis-config-h2.xml y mybatis-config.xml). Para cada archivo agregue o reemplace la correspondiente configuración:
 	
-	driver.encoding=UTF8
+	**mybatis-config-h2.xml**
 	
-	user=[User del punto 8 o del punto 7]
-	
-	pwd=[Contraseña del punto 8 o del punto 7]
-	
-	config=mybatis-config.xml
-
-	```
-	(4)Ajuste de los archivos de configuración de mybayis(mybatis-config-h2.xml y mybatis-config.xml)
-	
-	Para cada archivo agregue o reemplace la correspondiente configuración
-	
-	mybatis-config-h2.xml
-	```
+	```xml
 	<environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
@@ -234,14 +195,14 @@
     </environments>
 	```
 	
-	mybatis-config.xml
-	```
+	**mybatis-config.xml**
+	```xml
 	<environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="org.postgresql.Driver" />
-                <property name="url" value="[URL definitiva del punto 8]"/> 
+                <property name="url" value="[URL definitiva del punto 8, cambiando '&' por '&amp;']"/> 
                 <property name="username" value="[User del punto 8 o del punto 7]" />
                 <property name="password" value="[Contraseña del punto 8 o del punto 7]" />
             </dataSource>
