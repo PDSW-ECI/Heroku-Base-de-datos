@@ -150,7 +150,7 @@
 	**Tenga en cuenta:** En XML '&' es un caracter de escape. Por esto, cuando vaya a usar la URL de conexión dentro de un archivo de confuguración XML, en lugar del '&' debe usar '&amp;amp;' para que el parser XML lo interprete correctamente.
 
 
-(15)Una vez configurado presione el botón "Test",si fue correcta la conexión proceda a darle "ok",si no revise los parámetros nuevamente.
+	(15)Una vez configurado presione el botón "Test",si fue correcta la conexión proceda a darle "ok",si no revise los parámetros nuevamente.
 	
 	![](img/SQuirreLinstaller12.png)
 	
@@ -161,7 +161,7 @@
 	
 9.	Configuración del contenedor liviano para Postgres
 
-	(1)Agregue la siguiente dependencia (Postgres) a su proyecto.
+	(1) Agregue la siguiente dependencia (Postgres) a su proyecto.
 	
 	```
 	<dependency>
@@ -171,11 +171,11 @@
     </dependency>
 	```
 
-	(2)En el contenedor liviano ajuste el "JdbcHelper" para que use Postgres.
+	(2) En el contenedor liviano ajuste el "JdbcHelper" para que use Postgres.
 	
 	![](img/Contenedor1.png)
 	
-	(3)Ajuste los archivos de configuración de la aplicacion (applicationconfig-h2.properties y applicationconfig.properties)
+	(3) Ajuste los archivos de configuración de la aplicacion (applicationconfig-h2.properties y applicationconfig.properties)
 	
 	Para cada archivo agregue o reemplace la correspondiente configuración
 	
@@ -202,7 +202,7 @@
 	```
 	dao=mybatis
 
-	url=[URL definitiva del punto 8]
+	url=[URL definitiva del punto 8, cambiando '&' por '&amp;']
 	
 	driver=org.postgresql.Driver
 	
