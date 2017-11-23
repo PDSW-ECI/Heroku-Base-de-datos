@@ -202,7 +202,7 @@
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="org.postgresql.Driver" />
-                <property name="url" value="[URL definitiva del punto 8, cambiando '&' por '&amp;']"/> 
+                <property name="url" value="[URL definitiva del punto 8.14, cambiando '&' por '&amp;']"/> 
                 <property name="username" value="[User del punto 8 o del punto 7]" />
                 <property name="password" value="[Contraseña del punto 8 o del punto 7]" />
             </dataSource>
