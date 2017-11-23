@@ -147,7 +147,10 @@
 	```
 	![](img/SQuirreLinstaller11.png)
 	
-	(15)Una vez configurado presione el botón "Test",si fue correcta la conexión proceda a darle "ok",si no revise los parámetros nuevamente.
+	**Tenga en cuenta:** En XML '&' es un caracter de escape. Por esto, cuando vaya a usar la URL de conexión dentro de un archivo de confuguración XML, en lugar del '&' debe usar '&amp;amp;' para que el parser XML lo interprete correctamente.
+
+
+(15)Una vez configurado presione el botón "Test",si fue correcta la conexión proceda a darle "ok",si no revise los parámetros nuevamente.
 	
 	![](img/SQuirreLinstaller12.png)
 	
